@@ -169,3 +169,118 @@ Note: Absolute positioned elements are removed from the normal flow, and can ove
 
 A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
 
+### The z-index Property
+
+
+When elements are positioned, they can overlap other elements.
+
+The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others).
+
+### CSS Overflow
+
+The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+
+The overflow property has the following values:
+
+visible - Default. The overflow is not clipped. The content renders outside the element's box
+
+hidden - The overflow is clipped, and the rest of the content will be invisible
+
+scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+
+auto - Similar to scroll, but it adds scrollbars only when necessary
+
+### The float Property
+The float property is used for positioning and formatting content e.g. let an image float left to the text in a container.
+
+The float property can have one of the following values:
+
+
+
+left - The element floats to the left of its container
+
+right - The element floats to the right of its container
+
+none - The element does not float (will be displayed just where it occurs in the text). This is default
+
+inherit - The element inherits the float value of its parent
+
+In its simplest use, the float property can be used to wrap text around images.
+
+
+### The clear Property
+When we use the float property, and we want the next element below (not on right or left), we will have to use the clear property.
+
+The clear property specifies what should happen with the element that is next to a floating element.
+
+The clear property can have one of the following values:
+
+
+none - The element is not pushed below left or right floated elements. This is default
+
+left - The element is pushed below left floated elements
+
+right - The element is pushed below right floated elements
+
+both - The element is pushed below both left and right floated elements
+
+inherit - The element inherits the clear value from its parent
+
+When clearing floats, you should match the clear to the float: If an element is floated to the left, then you should clear to the left. Your floated element will continue to float, but the cleared element will 
+appear below it on the web page.
+
+
+### CSS Combinators
+
+A combinator is something that explains the relationship between the selectors.
+
+A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
+
+There are four different combinators in CSS:
+
+
+#### descendant selector (space)
+
+#### child selector (>)
+
+#### adjacent sibling selector (+)
+
+#### general sibling selector (~)
+
+### What are Pseudo-classes?
+
+A pseudo-class is used to define a special state of an element.
+
+For example, it can be used to:
+
+Style an element when a user mouses over it.
+
+Style visited and unvisited links differently.
+
+Style an element when it gets focus.
+
+```
+selector:pseudo-class {
+  property: value;
+}
+```
+
+### What are Pseudo-Elements?
+
+A CSS pseudo-element is used to style specified parts of an element.
+
+For example, it can be used to:
+
+Style the first letter, or line, of an element.
+
+Insert content before, or after, the content of an element.
+
+Syntax
+
+The syntax of pseudo-elements:
+
+```
+selector::pseudo-element {
+  property: value;
+}
+```
